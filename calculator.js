@@ -3,18 +3,52 @@
 class Calculator {
   //write your code here
   constructor () {
+      this.result = null
+      this.PI = Math.PI
   }
-  add () {
+  add (ADD) {
+    this.result +=ADD
+    return this
   }
-  substract () {
+  substract (SUBS) {
+    this.result-=SUBS
+    return this
   }
-  multiply () {
+  multiply (MUL) {
+    if(this.result == null ){
+      this.result = MUL
+    }else {
+      this.result *= MUL
+    }
+    
+    return this
   }
-  divide () {
+  divide (DIV) {
+    if(this.result += null ){
+    this.result = DIV
+    }else {
+    this.result /= DIV
+    }
+    
+    return this
   }
-  square () {
+  power (pow) {
+    this.result = Math.pow(this.result,pow)
+    return this
   }
   squareRoot () {
+    this.result = Math.sqrt(this.result)
+    return this
+  }
+
+  keliling (){
+    this.multiply(this.PI).multiply(2)
+    return this
+  }
+  
+  luas(){
+    this.power(this.result).multiply(this.PI)
+    return this
   }
 }
 
@@ -25,7 +59,10 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+let cal =  new Calculator()
+// console.log(cal.add(10).substract(5).multiply(5).divide(5).power(2).squareRoot())
+console.log(cal.add(2).luas())
 
-module.exports = {
-  Calculator
-}
+// module.exports = {
+//   Calculator
+// }
