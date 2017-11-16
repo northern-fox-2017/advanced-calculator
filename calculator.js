@@ -1,20 +1,31 @@
 'use strict'
 
 class Calculator {
-  //write your code here
   constructor () {
+    this.hasil = 0;
   }
-  add () {
+  add (tambah) {
+    this.hasil += tambah;
+    return this
   }
-  substract () {
+  substract (kurang) {
+    this.hasil -= kurang
+    return this
   }
-  multiply () {
+  multiply (kali) {
+    this.hasil *= kali
+    return this
   }
-  divide () {
+  divide (bagi) {
+    this.hasil /= bagi
+    return this
   }
-  square () {
+  square (pangkat) {
+    this.hasil = Math.pow(this.hasil, pangkat)
+    return this
   }
-  squareRoot () {
+  squareRoot (akar) {
+    this.hasil = Math.sqrt(this.hasil, akar)
   }
 }
 
@@ -29,3 +40,6 @@ class Calculator {
 module.exports = {
   Calculator
 }
+
+let calculatorAndrey = new Calculator();
+console.log(calculatorAndrey.add(5).multiply(10))
