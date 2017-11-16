@@ -29,6 +29,10 @@ class Calculator {
     this.value = Math.sqrt(this.value);
     return this
   }
+  getCirlce (){
+    this.value = Math.PI*2* this.value;
+    return this;
+  }
   result(){
     return `hasil akhir = ${this.value}`;
     // return this
@@ -44,7 +48,8 @@ class Calculator {
 */
 let output = new Calculator();
 // console.log(output.add(5).substract(2).multiply(5).divide(2).square(2).squareRoot().result())
-console.log(output.add(5).substract(3).multiply(10).divide(2).square(3).squareRoot().result())
+console.log(output.add(5).substract(3).multiply(10).divide(2).square(3).squareRoot().getCirlce().result())
+// console.log(output.add(5).getCirlce());
 // module.exports = {
 //   Calculator
 // }
