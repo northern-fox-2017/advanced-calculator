@@ -3,39 +3,22 @@
 class Calculator {
   //write your code here
   constructor (init=0) {
-    this.initValue = init
     this.currentValue = init
   }
-  add () {
-    let resultAdd = 0;
-    for (let i = 0; i < arguments.length ; i++){
-      resultAdd += arguments[i]
-    }
-    this.currentValue += resultAdd;
+  add (add) {
+    this.currentValue += add;
     return this
   }
-  substract () {
-    let resultSub = 0;
-    for (let i = 0; i < arguments.length ; i++){
-      resultSub -= arguments[i]
-    }
-    this.currentValue += resultSub;
+  substract (sub) { 
+    this.currentValue -= sub;
     return this
   }
-  multiply () {
-    let resultMul = 1;
-    for (let i = 0; i < arguments.length ; i++){
-      resultMul *= arguments[i]
-    }
-    this.currentValue *= resultMul;
+  multiply (mul) {
+    this.currentValue *= mul
     return this
   }
-  divide () {
-    let resultDiv = 1;
-    for (let i = 0; i < arguments.length ; i++){
-      resultDiv *= arguments[i]
-    }
-    this.currentValue /= resultDiv;
+  divide (div) {
+    this.currentValue /= div;
     return this
   }
   square () {
@@ -49,7 +32,12 @@ class Calculator {
 }
 
 let angka = new Calculator();
-console.log(angka.add(1,2).add(3).substract(5).multiply(3,2).divide(2).square().squareRoot());
+console.log(angka.add(6).add(3).substract(5).multiply(3).divide(2).square().squareRoot());
+
+let angka2 = new Calculator();
+console.log(angka2.add(5).add(4));
+console.log(angka2.square());
+console.log(angka2.squareRoot());
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
