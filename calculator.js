@@ -1,22 +1,38 @@
 'use strict'
 
 class Calculator {
-  //write your code here
   constructor () {
+    this.hasil = 0;
   }
-  add () {
+  add (num) {
+     this.hasil += num;
+     return this;
   }
-  substract () {
+  substract (num) {
+     this.hasil -= num;
+     return this
   }
-  multiply () {
+  multiply (num) {
+     this.hasil *= num;
+     return this
   }
-  divide () {
+  divide (num) {
+     this.hasil /= num;
+     return this
   }
-  square () {
+  square (num) {
+     this.hasil = Math.pow(this.hasil, num);
+     return this
   }
-  squareRoot () {
+  squareRoot (num) {
+     this.hasil = Math.sqrt(this.hasil, num);
+     return this
   }
 }
+
+var Hitung = new Calculator();
+Hitung.add(1).substract(-2).divide(3).multiply(3).square(2).squareRoot(2);
+console.log(Hitung.hasil);
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
