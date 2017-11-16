@@ -3,6 +3,8 @@
 class Calculator {
   constructor () {
     this.hasil = 0;
+    const pi = Math.PI;
+    this.pi = pi;
   }
   add (tambah) {
     this.hasil += tambah;
@@ -42,4 +44,11 @@ module.exports = {
 }
 
 let calculatorAndrey = new Calculator();
-console.log(calculatorAndrey.add(5).multiply(10))
+calculatorAndrey.add(5).multiply(10)
+console.log(calculatorAndrey.hasil)
+
+
+//Menghitung luas lingkaran
+//PI * r^2
+calculatorAndrey.add(7).square(2).multiply(calculatorAndrey.pi)
+console.log(calculatorAndrey.hasil)
