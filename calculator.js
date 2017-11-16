@@ -30,6 +30,11 @@ class Calculator {
     this.result = Math.sqrt(this.result)
     return this;
   }
+  circle(input) {
+    const phi = Math.PI
+    this.result = 2 * phi * input
+    return this;
+  }
   getResult() {
     // return `${this.arrLog.toString()} Result: ${this.result}`
     return `Result: ${this.result}`;
@@ -39,6 +44,7 @@ class Calculator {
 let calc = new Calculator()
 // console.log(calc.add(5).getResult()); // 5
 console.log(calc.add(5).substract(2).multiply(3).divide(3).square(2).squareRoot(3).getResult()); // 3
+console.log(calc.circle(14).getResult()); // 3
 
 module.exports = {
   Calculator
