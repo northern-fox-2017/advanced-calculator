@@ -29,7 +29,8 @@ class Calculator {
     return this
   }
   squareRoot() {
-    this.num = Math.squareRoot(this.num)
+    this.num = Math.sqrt(this.num)
+    
     return this
   }
 }
@@ -42,8 +43,9 @@ kalkul = new Calculator()
 kalkul.add(7).square(2).multiply(kalkul.pi)
 console.log(`Luas Lingkaran Jari-jari 7 = ${kalkul.num}`)
 
-
-
+kalkul = new Calculator()
+kalkul.add(3).squareRoot()
+console.log(`Akar 3  = ${kalkul.num}`)
 /** note : you can use several features from ecmascript, such as:
 * - Classes
 * - Default Parameters
