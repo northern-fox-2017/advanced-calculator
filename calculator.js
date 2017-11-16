@@ -29,6 +29,10 @@ class Calculator {
     this.calculate = Math.sqrt(root)
     return this
   }
+  phi () {
+    this.calculate = this.calculate * Math.PI
+    return this
+  }
 }
 
 /** note : you can use several features from ecmascript, such as:
@@ -49,4 +53,4 @@ let calculator = new Calculator(1)
 // console.log(calculator.add(4).substract(1).multiply(2).calculate);
 // console.log(calculator.add(4).substract(1).multiply(2).divide(4).calculate);
 // console.log(calculator.add(4).substract(1).multiply(2).divide(4).square(3).calculate);
-console.log(calculator.add(4).substract(1).multiply(2).divide(4).square(3).squareRoot(2).calculate);
+console.log(calculator.add(4).substract(1).multiply(2).divide(4).square(3).squareRoot(2).phi().calculate);
