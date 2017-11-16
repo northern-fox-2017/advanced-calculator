@@ -38,15 +38,23 @@ class Calculator {
     this.result = Math.sqrt(this.result);
     return this;
   }
+  countCircle(radius) {
+    const phi = 3.14;
+
+    this.result = radius * radius * phi;
+    return this;
+  }
 }
 
 var hasil = new Calculator();
 var multiply = new Calculator();
 var divide = new Calculator();
+var countCircle = new Calculator();
 
 console.log(hasil.add(5).substract(2).multiply(3).divide(3).square(3).squareRoot());
 console.log(multiply.multiply(5));
 console.log(divide.divide(4));
+console.log(countCircle.countCircle(7));
 /** note : you can use several features from ecmascript, such as:
 * - Classes
 * - Default Parameters
