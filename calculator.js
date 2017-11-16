@@ -2,19 +2,39 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (angkaPertama = 0) {
+    // this.firstNum = firstNum
+    this.hasil = angkaPertama
   }
-  add () {
+
+  add (nextNum) {
+    this.hasil += nextNum
+    return this;
   }
-  substract () {
+
+  substract (nextNum) {
+    this.hasil -= nextNum
+    return this;
   }
-  multiply () {
+
+  multiply (nextNum) {
+    this.hasil *= nextNum
+    return this;
   }
-  divide () {
+
+  divide (nextNum) {
+    this.hasil /= nextNum
+    return this;
   }
-  square () {
+
+  square (nextNum) {
+    this.hasil = Math.pow(this.hasil, nextNum)
+    return this;
   }
+
   squareRoot () {
+    this.hasil = Math.sqrt(this.hasil)
+    return this;
   }
 }
 
@@ -25,6 +45,10 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
+// Jika menggunakan fungsi / Method pertama selain add masukkan angkaPertama sebagai Parameter terlebih dahulu di class Calculator
+// contoh => let newCalculator = new Calculator(angkaPertama);
+
 
 module.exports = {
   Calculator
