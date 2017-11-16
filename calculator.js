@@ -2,21 +2,47 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor() {
+    this.num = 0
+    const pi = Math.PI
+    this.pi = pi
+    
   }
-  add () {
+  add(input) {
+    this.num = this.num + input
+    return this
   }
-  substract () {
+  substract(input) {
+    this.num = this.num - input
+    return this
   }
-  multiply () {
+  multiply(input) {
+    this.num = this.num * input
+    return this
   }
-  divide () {
+  divide(input) {
+    this.num = this.num / input
+    return this
   }
-  square () {
+  square(input) {
+    this.num = Math.pow(this.num, input)
+    return this
   }
-  squareRoot () {
+  squareRoot() {
+    this.num = Math.squareRoot(this.num)
+    return this
   }
 }
+
+let kalkul = new Calculator()
+kalkul.add(3).add(5)
+console.log(`3 + 5 = ${kalkul.num}`)
+
+kalkul = new Calculator()
+kalkul.add(7).square(2).multiply(kalkul.pi)
+console.log(`Luas Lingkaran Jari-jari 7 = ${kalkul.num}`)
+
+
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
