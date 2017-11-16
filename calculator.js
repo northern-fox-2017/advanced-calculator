@@ -1,5 +1,6 @@
 'use strict'
 
+const phi = Math.PI;
 class Calculator {
   //write your code here
   constructor () {
@@ -30,6 +31,11 @@ class Calculator {
     this.result = Math.sqrt(this.result)
     return this
   }
+
+  luasLingkaran(r){
+    this.result = Math.pow(r,2) * phi
+    return this
+  }
 }
 
 /** note : you can use several features from ecmascript, such as:
@@ -45,6 +51,7 @@ module.exports = {
 }
 
 let result = new Calculator();
-
+let luasLingkaran = new Calculator();
 // console.log(result.substract(10));
 console.log(result.add(10).substract(2).multiply(2).divide(2).square(2).squareRoot());
+console.log(result.luasLingkaran(2));
