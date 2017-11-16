@@ -29,11 +29,11 @@ class Calculator {
     this.sum=Math.sqrt(this.sum)
     return this
   }
-  wideCircle(){
-    this.sum=this.sum*2*Math.PI
+  PI(){
+    this.sum=this.sum*Math.PI
     return this
   }
-  reset(){
+  reset(){ 
     this.sum=0;
     return this
   }
@@ -52,7 +52,7 @@ console.log(`Angkar pangkat 4 = ${calcul.sum}`)
 
 
 calcul.reset();
-calcul.add(14).wideCircle()
+calcul.add(14).multiply(2).PI()
 console.log(`Luas lingkaran dari jari-jari 14 = ${calcul.sum}`)
 module.exports = {
   Calculator
