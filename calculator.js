@@ -26,8 +26,8 @@ class Calculator {
     this.hasil = Math.pow(this.hasil, pangkat)
     return this
   }
-  squareRoot (akar) {
-    this.hasil = Math.sqrt(this.hasil, akar)
+  squareRoot () {
+    this.hasil = Math.sqrt(this.hasil)
   }
 }
 
@@ -44,11 +44,11 @@ module.exports = {
 }
 
 let calculatorAndrey = new Calculator();
-calculatorAndrey.add(5).multiply(10)
+calculatorAndrey.add(27).squareRoot()
 console.log(calculatorAndrey.hasil)
 
 
-//Menghitung luas lingkaran
-//PI * r^2
-calculatorAndrey.add(7).square(2).multiply(calculatorAndrey.pi)
-console.log(calculatorAndrey.hasil)
+// //Menghitung luas lingkaran
+// //PI * r^2
+// calculatorAndrey.add(7).square(2).multiply(calculatorAndrey.pi)
+// console.log(calculatorAndrey.hasil)
