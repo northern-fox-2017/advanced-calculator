@@ -1,20 +1,40 @@
 'use strict'
 
+const phi = Math.PI;
 class Calculator {
   //write your code here
   constructor () {
+    this.result = 0;
   }
-  add () {
+  add (tambah) {
+    this.result += tambah
+    return this
   }
-  substract () {
+  substract (kurang) {
+    this.result -= kurang
+    return this
   }
-  multiply () {
+  multiply (kali) {
+
+    this.result = this.result * kali
+    return this
   }
-  divide () {
+  divide (bagi) {
+    this.result /= bagi
+    return this
   }
-  square () {
+  square (pangkat) {
+    this.result = Math.pow(this.result, pangkat)
+    return this
   }
-  squareRoot () {
+  squareRoot (akar) {
+    this.result = Math.sqrt(this.result)
+    return this
+  }
+
+  luasLingkaran(r){
+    this.result = Math.pow(r,2) * phi
+    return this
   }
 }
 
@@ -29,3 +49,9 @@ class Calculator {
 module.exports = {
   Calculator
 }
+
+let result = new Calculator();
+let luasLingkaran = new Calculator();
+// console.log(result.substract(10));
+console.log(result.add(10).substract(2).multiply(2).divide(2).square(2).squareRoot());
+console.log(result.luasLingkaran(2));
