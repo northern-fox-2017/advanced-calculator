@@ -1,20 +1,33 @@
 'use strict'
 
 class Calculator {
-  //write your code here
   constructor () {
+    this.hasil = 0;
+    const pi = Math.PI;
+    this.pi = pi;
   }
-  add () {
+  add (tambah) {
+    this.hasil += tambah;
+    return this
   }
-  substract () {
+  substract (kurang) {
+    this.hasil -= kurang
+    return this
   }
-  multiply () {
+  multiply (kali) {
+    this.hasil *= kali
+    return this
   }
-  divide () {
+  divide (bagi) {
+    this.hasil /= bagi
+    return this
   }
-  square () {
+  square (pangkat) {
+    this.hasil = Math.pow(this.hasil, pangkat)
+    return this
   }
   squareRoot () {
+    this.hasil = Math.sqrt(this.hasil)
   }
 }
 
@@ -29,3 +42,13 @@ class Calculator {
 module.exports = {
   Calculator
 }
+
+let calculatorAndrey = new Calculator();
+calculatorAndrey.add(27).squareRoot()
+console.log(calculatorAndrey.hasil)
+
+
+// //Menghitung luas lingkaran
+// //PI * r^2
+// calculatorAndrey.add(7).square(2).multiply(calculatorAndrey.pi)
+// console.log(calculatorAndrey.hasil)
