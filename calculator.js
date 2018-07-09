@@ -3,18 +3,39 @@
 class Calculator {
   //write your code here
   constructor () {
+      this.value = 0;
   }
-  add () {
+  add (num) {
+    this.value += num;
+    return this;
   }
-  substract () {
+  substract (num) {
+    this.value -= num;
+    return this;
   }
-  multiply () {
+  multiply (num) {
+    this.value *= num;
+    return this
   }
-  divide () {
+  divide (num) {
+    this.value /= num;
+    return this
   }
-  square () {
+  square (num) {
+    this.value = Math.pow(this.value, num);
+    return this
   }
   squareRoot () {
+    this.value = Math.sqrt(this.value);
+    return this
+  }
+  getCirlce (){
+    this.value = Math.PI*2* this.value;
+    return this;
+  }
+  result(){
+    return `hasil akhir = ${this.value}`;
+    // return this
   }
 }
 
@@ -25,7 +46,10 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
-
-module.exports = {
-  Calculator
-}
+let output = new Calculator();
+// console.log(output.add(5).substract(2).multiply(5).divide(2).square(2).squareRoot().result())
+console.log(output.add(5).substract(3).multiply(10).divide(2).square(3).squareRoot().getCirlce().result())
+// console.log(output.add(5).getCirlce());
+// module.exports = {
+//   Calculator
+// }
